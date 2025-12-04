@@ -1,11 +1,12 @@
 import React from "react";
-import "./register.css";
+import "./styles/register.css";
+import { Link } from "react-router-dom";
 
-function register() {
+function Register() {
   return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
         href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet"
@@ -21,9 +22,12 @@ function register() {
         <label>Confirm Password</label>
         <input type="password" />
         <button className="button-17">REGISTER</button>
+        <Link to="/login" className="link-style">
+          <span>Already have account</span>
+        </Link>
       </div>
     </>
   );
 }
 
-export default register;
+export default Register;

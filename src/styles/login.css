@@ -113,3 +113,11 @@ label {
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
     rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
 }
+
+.link-style {
+  font-family: "Jost", sans-serif;
+  color: #e3cef5;
+}
+.link-style :active {
+  color: whitesmoke;
+}

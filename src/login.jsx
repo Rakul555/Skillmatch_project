@@ -1,11 +1,12 @@
 import React from "react";
-import "./login.css";
+import "./styles/login.css";
+import { Link } from "react-router-dom";
 
-function login() {
+function Login() {
   return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
         href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet"
@@ -17,9 +18,12 @@ function login() {
         <label>Password</label>
         <input type="password" />
         <button className="button-17">LOGIN</button>
+        <Link to="/register" className="link-style">
+          <span>Don't have an account?</span>
+        </Link>
       </div>
     </>
   );
 }
 
-export default login;
+export default Login;
