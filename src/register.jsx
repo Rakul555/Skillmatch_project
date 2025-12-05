@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles/register.css";
-import { Link } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 
 function Register() {
   let [user, setUser] = useState({});
@@ -8,13 +8,14 @@ function Register() {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
   let [newPass, setNewPass] = useState(null);
+  let navigate=useNavigate();
 
   function verify() {
     if (password === newPass) {
       setUser({ username: name, email: email, password: password });
-      console.log(user);
+      navigate('/chooseskill')
     } else {
-      alert("Please check confirm Password");
+      alert("Please check & confirm details");
     }
   }
 
@@ -42,6 +43,7 @@ function Register() {
         <Link to="/login" className="link-style">
           <span>Already have account</span>
         </Link>
+        <Outlet />
       </div>
     </>
   );
